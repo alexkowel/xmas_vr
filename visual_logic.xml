@@ -1,0 +1,270 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="356.6119225740432" scrolly="605.15" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="A(d#uB-=kay^Dp#o`fP+" x="-170" y="-350">
+      <field name="LOAD_COMP_ASSETS">TRUE</field>
+      <field name="FULLSCREEN">TRUE</field>
+      <field name="BKG_TRANSPARENCY">FALSE</field>
+      <field name="PRESERVE_DRAW_BUF">FALSE</field>
+      <field name="FADE_ANNOTATIONS">TRUE</field>
+    </block>
+  </tab>
+  <tab name="Main" type="MainTab" active="true" scrollx="299" scrolly="1055" scale="0.9">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="dR(*`klf+GYymS8*g}!`" type="">i</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="brightnessContrast" id="Y:@`ox[=^W8%Lxq:nIW8" x="-310" y="-1150">
+      <value name="BRIGHTNESS">
+        <shadow type="math_number" id="tyr2$G^v*IO8lhkbu$0%">
+          <field name="NUM">0.1</field>
+        </shadow>
+      </value>
+      <value name="CONTRAST">
+        <shadow type="math_number" id="i`4_6N/C1VGPc{0wnb-:">
+          <field name="NUM">0.1</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="_pl!%bA/z)tbf_6gCru$" x="-310" y="-1050">
+      <field name="NAME">play_animation</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="variables_set" id="sHb2%3v3kDO60aRJfmFN">
+          <field name="VAR" id="dR(*`klf+GYymS8*g}!`">i</field>
+          <value name="VALUE">
+            <block type="math_random_int" id="+aaK@n.B(ln/GTV$kb`5">
+              <value name="FROM">
+                <shadow type="math_number" id="ua34`CJ77}w`=15~~Q:]">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+              <value name="TO">
+                <shadow type="math_number" id="r?2.FOmZ1#=1mcDzE0q9">
+                  <field name="NUM">4</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="controls_if" id="x)-~~n1[1{nKZtEDrO@=">
+              <mutation elseif="2" else="1"/>
+              <value name="IF0">
+                <block type="logic_compare" id="wN~pCU9R7/;ZO^)-z1fc">
+                  <field name="OP">LTE</field>
+                  <value name="A">
+                    <block type="variables_get" id="ATvqPC=5MI`Nv#8bqU-E">
+                      <field name="VAR" id="dR(*`klf+GYymS8*g}!`">i</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" id="(4Y-ew*~yl+1qY7/J;GG">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="playAnimationExt" id="Z0Xoq-Uj0,PW13~3g;yd">
+                  <field name="REVERSED">FALSE</field>
+                  <value name="VALUE">
+                    <block type="animationList" id="Ay:eLPAA@M41E|Mcu|[5">
+                      <field name="FIELDNAME">santa_claus_rig</field>
+                    </block>
+                  </value>
+                  <value name="FROM">
+                    <shadow type="math_number" id="cD0tV4=+MbFou}?Y~;O#">
+                      <field name="NUM">0</field>
+                    </shadow>
+                  </value>
+                  <value name="TO">
+                    <shadow type="math_number" id="Evz*W~X@59o?52N,*Hof">
+                      <field name="NUM">200</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="procedures_callnoreturn" id="naUl2oad8VkgJxSl:esC">
+                      <mutation name="play_animation"/>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+              <value name="IF1">
+                <block type="logic_compare" id="}OCVqzV@Mnzh-YZChGL6">
+                  <field name="OP">LTE</field>
+                  <value name="A">
+                    <block type="variables_get" id="v-r,(^v9!yRCuh:.sVAJ">
+                      <field name="VAR" id="dR(*`klf+GYymS8*g}!`">i</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" id=")FO/jC(H~I:wo]|ma@_5">
+                      <field name="NUM">2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO1">
+                <block type="playAnimationExt" id="kK.`VsO=dE^k}FOJSOqS">
+                  <field name="REVERSED">FALSE</field>
+                  <value name="VALUE">
+                    <block type="animationList" id="4EZ%2Z}+P)G6[va4?ME$">
+                      <field name="FIELDNAME">santa_claus_rig</field>
+                    </block>
+                  </value>
+                  <value name="FROM">
+                    <shadow type="math_number" id="%v1t^b|ZDS@u#^[V^v0l">
+                      <field name="NUM">200</field>
+                    </shadow>
+                  </value>
+                  <value name="TO">
+                    <shadow type="math_number" id="?YykGY.])aJm,y%zc60i">
+                      <field name="NUM">370</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="procedures_callnoreturn" id="Hm8(,KJ$uheQSUpg}#(=">
+                      <mutation name="play_animation"/>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+              <value name="IF2">
+                <block type="logic_compare" id="N-dr)*rX:Gp8J+!K9,Tx">
+                  <field name="OP">LTE</field>
+                  <value name="A">
+                    <block type="variables_get" id="tE%7ymd`E|aMC,7#W6DC">
+                      <field name="VAR" id="dR(*`klf+GYymS8*g}!`">i</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" id="t-?s{v,E6hNy}zRZ)5:y">
+                      <field name="NUM">3</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO2">
+                <block type="playAnimationExt" id="vG~Pj|*apwK5qNsOkp(n">
+                  <field name="REVERSED">FALSE</field>
+                  <value name="VALUE">
+                    <block type="animationList" id="WlED]zD!EzC0[Tf}Q?Mq">
+                      <field name="FIELDNAME">santa_claus_rig</field>
+                    </block>
+                  </value>
+                  <value name="FROM">
+                    <shadow type="math_number" id="F1fesl(n0RhdK`7IlQ9T">
+                      <field name="NUM">370</field>
+                    </shadow>
+                  </value>
+                  <value name="TO">
+                    <shadow type="math_number" id="D_DZfJwycEP{~vtq[t2.">
+                      <field name="NUM">528</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="procedures_callnoreturn" id="Y~|1m?Z1~pMzi|fb__4%">
+                      <mutation name="play_animation"/>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="playAnimationExt" id="nQ:ZH(0UbCUhT3U.C=xz">
+                  <field name="REVERSED">FALSE</field>
+                  <value name="VALUE">
+                    <block type="animationList" id="^dgC(w4RO*|DqF%T_==_">
+                      <field name="FIELDNAME">santa_claus_rig</field>
+                    </block>
+                  </value>
+                  <value name="FROM">
+                    <shadow type="math_number" id="?z,Er-HsSp1]@)0J~,0i">
+                      <field name="NUM">528</field>
+                    </shadow>
+                  </value>
+                  <value name="TO">
+                    <shadow type="math_number" id="=oqZBVF^H5GrZyecu^WG">
+                      <field name="NUM">727</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="procedures_callnoreturn" id="oL|xRn6jZ)w=eKecfKqn">
+                      <mutation name="play_animation"/>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="checkVRMode" id="xm#*@v36m`ctSfi,aF%;" x="90" y="-530"/>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="$-TMMQygAt2HS(GBLyVh" x="-310" y="-490">
+      <mutation name="play_animation"/>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="playSound" id="flkg2W#SUO0NEt7O^5M2" x="-310" y="-430">
+      <field name="LOOP">TRUE</field>
+      <value name="VALUE">
+        <block type="loadSound" id=";js]-_1TJAgXNGU}_XtW">
+          <field name="URL">./jingle_bells.mp3</field>
+        </block>
+      </value>
+      <next>
+        <block type="volume" id="iSw[7lVK_OM,;`W_Y,:;">
+          <value name="VALUE">
+            <block type="loadSound" id=")jf@qE;*y]vb}O%Z+#yJ">
+              <field name="URL">./jingle_bells.mp3</field>
+            </block>
+          </value>
+          <value name="VOLUME">
+            <shadow type="math_number" id="L0Y3`;T(~Wl:rGs]3`Fq">
+              <field name="NUM">0.2</field>
+            </shadow>
+          </value>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="qF|@LR@|b`/.7.ajl3!2" x="90" y="-410">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" enableifmissed="false"></mutation>
+      <value name="VALUE">
+        <block type="objectList" id="p:9y$Tmr|d0-y@3+M2:2">
+          <field name="FIELDNAME">Plane.003</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="enterVRMode" id=":`MXe,YMm2tGsWsFu.x(">
+          <field name="REF_SPACE">ORIGIN</field>
+          <statement name="DO_ENTER">
+            <block type="hide" id=":uqyIQPJIYZ:$ut{UGiT">
+              <value name="VALUE">
+                <block type="objectList" id="vgY2|=n!|bJQEy@~r3XE">
+                  <field name="FIELDNAME">Plane.003</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+          <statement name="DO_EXIT">
+            <block type="show" id="I#og!xOvD`+Ji}N?hY|O">
+              <value name="VALUE">
+                <block type="objectList" id="D*KW3}mBMO=Io-}z-5cp">
+                  <field name="FIELDNAME">Plane.003</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+          <next>
+            <block type="playSound" id="%imFf5[LUd5ZST;)*;n#">
+              <field name="LOOP">TRUE</field>
+              <comment pinned="false" h="80" w="160">Mobile Hack</comment>
+              <value name="VALUE">
+                <block type="loadSound" id=";/EL~Nah24rP5Zru#3rY">
+                  <field name="URL">./jingle_bells.mp3</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings width="700" height="718"></editorsettings>
+</xml>
